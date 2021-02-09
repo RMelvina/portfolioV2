@@ -1,0 +1,184 @@
+/* @import '../../shared/sections/section-one/section-one.component.css';
+@import '../../shared/sections/section-two/section-two.component.css';
+@import '../../shared/sections/section-three/section-three.component.css'; */
+@import "../../shared/navbar/navbar.component.css";
+@import "../../../../styles.css";
+.main-container {
+  color: white;
+  background: var(--mainBgColor);
+  height: 100vh;
+  /* max-height: calc(100vh - 50px); */
+  
+}
+.mainSub-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  height: fit-content;
+  border: 2px solid var(--bgColor);
+  border-radius: 1rem;
+  width: 90%;
+  /* background-color: rgba(0, 0, 0, 0.322); */
+}
+
+.projectName {
+  color: white;
+}
+.project_Details_Title {
+  color: white;
+  font-size: 2rem;
+}
+.slider-container {
+  /* margin-top: 4rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.inner-slider-container {
+  width: 100%;
+  /* height: 100%; */
+}
+.card {
+  justify-content: center;
+  background-color: rgba(49, 48, 48, 0.868);
+  color: white;
+  font-size: 1.1em;
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+}
+
+.details-container {
+  /* padding: 2rem; */
+  color: white;
+  font-size: 1.2em;
+}
+.lines-container {
+  color: white;
+  font-size: 1.2em;
+}
+.desc-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  font-size: 1rem;
+}
+.button {
+  background-color: var(--bgColor);
+  outline: none;
+  font-size: 1.1rem;
+  color: white;
+}
+.button:hover {
+  background-color: transparent;
+  outline: 1px solid var(--bgColor);
+}
+.mainDetails-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 2rem;
+  width: 40%;
+}
+
+.buttons {
+  position: absolute;
+  top: 40%;
+}
+.iconNext,
+.iconPrevs {
+  background-color: white;
+  font-size: 2rem;
+  outline: none;
+  color: white;
+  width: 90px;
+  outline: none;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+}
+.icon {
+  color: var(--bgColor);
+}
+.iconNext:hover,
+.iconPrevs:hover {
+  background-color: var(--bgColor);
+
+  /* outline: 1px solid var(--bgColor); */
+}
+.iconNext:hover .icon,
+.iconPrevs:hover .icon {
+  color: white;
+}
+
+.arrowUpIcon {
+  font-size: 3rem;
+  color: var(--fontColor);
+  font-weight: 600;
+  position: absolute;
+}
+
+.arrowUpbtn {
+  font-size: 3rem;
+  top: 90%;
+  left: 92%;
+  position: fixed;
+  color: white;
+  font-weight: 600;
+  /* position: absolute; */
+  background-color: var(--bgColor);
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  /* visibility: hidden; */
+}
+.arrowUpbtn:hover {
+  color: var(--fontColor);
+  background-color: transparent;
+  outline: 2px solid var(--bgColor);
+}
+.showBtn {
+  opacity: 1;
+}
+
+/* --------------------------- */
+/*      Media Quries           */
+/* --------------------------- */
+/*      iPad Pro/ iPad         */
+/* --------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+/* --------------------------- */
+/* --------------------------- */
+/*        Desktops              */
+/* --------------------------- */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .desc-container {
+    font-size: 1.6rem;
+    line-height: 1rem;
+  }
+}
+
+/* --------------------------- */
+/*        Mobiles              */
+/* --------------------------- */
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .arrowUpbtn {
+    left: 84%;
+  }
+}
+/* --------------------------- */
+
+/* --------------------------- */
+/*        Galaxy Fold          */
+/* --------------------------- */
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+  .card {
+    background-color: sandybrown;
+  }
+}
+/* --------------------------- */

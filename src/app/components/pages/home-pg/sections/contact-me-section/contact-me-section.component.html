@@ -1,0 +1,31 @@
+<section class="container-fluid contact-section" id="contact">
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row justify-content-center">
+      <!-- Column Heaing -->
+      <div class="col-12">
+        <!-- Heading -->
+        <h1 class="mainTitle text-center">Contact</h1>
+        <!-- Heading Ends -->
+      </div>
+      <!-- Column Heading Ends -->
+      <!-- Column Buttons -->
+      <div
+        class="col-lg-2 col-md-2 col-sm-2 icon-col d-flex align-items-center justify-content-center"
+        *ngFor="let icon of icons"
+      >
+        <!-- Button -->
+        <a href="{{ icon.link }}">
+          <button class="social-icons" mat-fab>
+            <i class="{{ icon.icon }}"></i>
+          </button>
+        </a>
+        <!-- Button Ends -->
+      </div>
+      <!-- Column Buttons Ends -->
+    </div>
+    <!-- Row ends -->
+  </div>
+  <!-- Container ends -->
+</section>

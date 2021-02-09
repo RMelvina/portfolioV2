@@ -1,0 +1,107 @@
+@import "../../../../../../styles.css";
+@import "../about-section/about-section.component.css";
+
+.what-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(0, 0, 0);
+}
+.service-container {
+  min-width: 100%;
+}
+.mainTitle {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+}
+.service-title {
+  margin-bottom: 4%;
+}
+
+.mainTitle::after {
+  content: "What I make";
+  color: var(--fontColor);
+  background-color: black;
+  width: 120px;
+}
+.mainTitle::before {
+  background-color: white;
+  width: 16%;
+}
+
+.card {
+  margin-right: 2rem;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(49, 48, 48, 0.868);
+}
+.card:hover {
+  background-color: var(--bgColor);
+}
+.img {
+  width: 100px;
+  height: 100px;
+}
+.heading,
+.desc {
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+
+.info-container {
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  animation: rubberBand 1s linear;
+}
+.card:hover .icon {
+  animation: rubberBand 1s linear;
+  color: white;
+}
+.img:hover {
+  text-decoration: none;
+  color: #ff00ff;
+}
+/* --------------------------- */
+/*      Media Quries           */
+/* --------------------------- */
+/*      iPad Pro/ iPad         */
+/* --------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+}
+/* --------------------------- */
+
+/* --------------------------- */
+/*        Mobiles              */
+/* --------------------------- */
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .card {
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .service-row {
+    padding: 1rem;
+  }
+  .mainTitle::before {
+    width: 50%;
+  }
+}
+/* --------------------------- */
+
+/* --------------------------- */
+/*        Galaxy Fold          */
+/* --------------------------- */
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+  .card {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .mainTitle::before {
+    width: 100%;
+  }
+}
+/* --------------------------- */

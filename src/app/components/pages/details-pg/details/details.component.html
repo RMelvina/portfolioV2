@@ -1,0 +1,40 @@
+<!-- Title -->
+<h1 class="project_Details_Title">{{ projectDetails.pTitle }}</h1>
+<!-- Title end -->
+
+<!-- GitHub and view buttons  -->
+<a
+  href="{{ btns.url }}"
+  *ngFor="let btns of projectDetails.buttonsArray"
+  target="_blank"
+>
+  <button
+    class="button btn mt-2 m-2 mb-3"
+    type="button"
+    mat-raised-button
+  >
+    {{ btns.btnName }}
+  </button>
+</a>
+<!-- GitHub and view buttons end -->
+
+<!-- Project desc -->
+<div
+  class="details-container"
+  *ngFor="let projectDetail of projectDetails.descArray"
+>
+  <p>
+    {{ projectDetail.pDesc }}
+  </p>
+</div>
+<!-- Project desc end -->
+
+<!-- Project lines -->
+<div class="lines-container mt-4">
+  <ul *ngFor="let projectDetail of projectDetails.array">
+    <li class="lines">
+      {{ projectDetail }}
+    </li>
+  </ul>
+</div>
+<!-- Project lines end -->

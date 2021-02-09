@@ -1,0 +1,142 @@
+<div class="container">
+  <!-- Outter Row -->
+  <div class="row">
+    <!-- Outter Column -->
+    <div class="col-md-12">
+      <!-- Outter Slider -->
+      <div class="slider ml-lg-5 ml-md-5 mt-5 py-lg-5">
+        <!-- Inner Row -->
+
+        <div class="row">
+          <!-- Image Container Column -->
+          <div class="col-md-4">
+            <!-- Image Container -->
+            <div class="imgContainer ml-lg-n5 mt-lg-0 mt-md-0 ml-md-n5 mt-n5">
+              <!-- Image Div -->
+              <div class="image" *ngFor="let project of projects">
+                <!-- Image -->
+                <img src="{{ project.projectsImgUrl }}" class="img-fluid" />
+                <!-- Image Ends -->
+              </div>
+              <!-- Image Div Ends -->
+            </div>
+            <!-- Image Container Ends -->
+          </div>
+          <!-- Image Container Column Ends -->
+
+          <!-- Content Column -->
+          <div class="col-md-8">
+            <!-- Slider -->
+
+            <div
+              id="mobileProjects"
+              class="carousel slide carousel-fade pr-lg-5 pr-sm-0 py-lg-0 py-4"
+              data-ride="carousel"
+              data-interval="false"
+            >
+              <!-- Carousel Inner -->
+              <div class="carousel-inner">
+                <!-- Carousel Items -->
+                <div
+                  class="{{ project.item }}"
+                  *ngFor="let project of projects"
+                >
+                  <!-- Heading -->
+                  <div class="content">
+                    <div class="title">
+                      {{ project.projectTitle }}
+                    </div>
+                    <!-- Heading Ends -->
+
+                    <!-- Desc -->
+                    <div class="desc">
+                      {{ project.desc }}
+                    </div>
+                    <!-- Desc Ends -->
+
+                    <!-- Read More Btn Div -->
+                    <div
+                      class="d-flex justify-content-center justify-content-lg-start justify-content-md-start mt-3"
+                    >
+                      <!-- Button -->
+
+                      <a
+                        [routerLink]="['/details', project.id]"
+                        target="_blank"
+                      >
+                        <button
+                          class="btn readMoreBtn ml-1"
+                          *ngFor="let button of project.buttons"
+                        >
+                          {{ button.btnName }}
+                        </button>
+                      </a>
+
+                      <!-- Button Ends -->
+                    </div>
+                    <!-- Read More Btn Div Ends -->
+                  </div>
+                </div>
+                <!-- Carousel Items Ends -->
+              </div>
+              <!-- Carousel Inner Ends -->
+
+              <!-- indicators -->
+              <ol
+                class="carousel-indicators indicators"
+                *ngIf="mobileIndicators"
+              >
+                <li
+                  data-target="#mobileProjects"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#mobileProjects" data-slide-to="1"></li>
+                <li data-target="#mobileProjects" data-slide-to="2"></li>
+                <li data-target="#mobileProjects" data-slide-to="3"></li>
+                <li data-target="#mobileProjects" data-slide-to="4"></li>
+                <li data-target="#mobileProjects" data-slide-to="5"></li>
+              </ol>
+              <!-- indicators -->
+
+              <!-- indicators -->
+              <!-- <ol class="carousel-indicators indicators"  *ngIf = "webIndicators">
+                          
+                              <li data-target="#productSlider" data-slide-to="0" class="active"></li>
+                            
+                          
+                          
+                          </ol> -->
+              <!-- indicators -->
+            </div>
+
+            <!-- Slider Ends -->
+          </div>
+          <!-- Content Column Ends -->
+
+          <!-- Show All Button Column -->
+          <div
+            class="col-md-12 w-100 d-flex align-items-center justify-content-center"
+          >
+            <button (click)="showAll.emit()" class="btn showAllBtn">
+              Show All
+            </button>
+          </div>
+          <!-- Show All Button Column Ends -->
+        </div>
+        <!-- Inner Row Ends -->
+      </div>
+      <!-- Outter Slider Ends -->
+    </div>
+    <!-- Outter Column Ends -->
+  </div>
+  <!-- Outter Row Ends -->
+</div>
+
+<!-- <ul id="langs">
+  <li class="j">Js</li>
+  <li>React</li>
+  <li>Angualr</li>
+</ul> -->
+
+<!-- *ngFor="let project of projects" *ngFor="let project of projects" -->

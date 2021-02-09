@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { navbarItems } from '../app/components/shared/arrays/navbarItems';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-profile';
+  navbarHomeItems = navbarItems;
 }

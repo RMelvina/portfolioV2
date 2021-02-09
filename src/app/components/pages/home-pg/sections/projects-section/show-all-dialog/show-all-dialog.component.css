@@ -1,0 +1,38 @@
+@import "../../../../../../../styles.css";
+
+.projectSubTitle {
+  font-family: var(--fontFamily);
+  color: black;
+  font-weight: 900;
+  text-align: center;
+}
+
+.iconClose {
+  position: relative;
+  float: right;
+  color: var(--fontColor);
+  cursor: pointer;
+  font-size: 2rem;
+}
+.card {
+  width: 100%;
+  background-color: black;
+  /* margin: 1px; */
+  
+}
+
+.mainProjects-container {
+  background-color: darkred;
+  /* width: 900px; */
+}
+
+.card-contatiner {
+  background-color: deeppink;
+  /* width: 100%; */
+}
+
+.content{
+  background-color: aquamarine;
+}
+
+

@@ -1,0 +1,135 @@
+@import "../../../../styles.css";
+
+/*  --------------------------------------------------------------------------------- */
+/*                                Navbar link                                         */
+/*                         ----------------------------                               */
+
+.navbarLink {
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+/*  --------------------------------------------------------------------------------- */
+/*                                Navbar scroll                                       */
+/*                         ----------------------------                               */
+
+.colorWhite {
+  color: white;
+}
+
+.hoverColor {
+  color: var(--fontColor);
+}
+.color {
+  color: white;
+}
+.fixed {
+  background-color: var(--bgColor);
+  transition: all 0.9s ease-in-out;
+  color: white;
+  padding: 12px 0;
+}
+.fixed .navbar-brand span {
+  color: white;
+  transition: all 0.9s ease-in-out;
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                Navbar icon                                         */
+/*                         ----------------------------                               */
+
+.navIcon {
+  color: white;
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                Navbar brand                                        */
+/*                         ----------------------------                               */
+
+.navbar-brand {
+  color: white;
+  font-family: var(--fontFamily);
+  font-size: 2rem;
+}
+.navbar-brand span {
+  color: var(--fontColor);
+}
+/*  --------------------------------------------------------------------------------- */
+/*                             Navbar next/prevs btn                                  */
+/*                         ----------------------------                               */
+
+.iconNext,
+.iconPrevs {
+  font-size: 1.2rem;
+  color: white;
+  width: 90px;
+  outline: none;
+  font-weight: 900;
+}
+.iconNext:hover,
+.iconPrevs:hover {
+  background: transparent;
+  color: white;
+}
+
+.bgColorP {
+  background-color: var(--bgColor);
+}
+.bgColorWhite {
+  background-color: white;
+  color: var(--fontColor);
+  outline: none;
+}
+.nextPrevBtnCon {
+  width: 100%;
+}
+
+/* ------------- */
+
+/*  --------------------------------------------------------------------------------- */
+/*                                   Media Quries                                     */
+/*  --------------------------------------------------------------------------------- */
+/*                                   iPad Pro/ iPad                                   */
+/*                            ---------------------------                             */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                     Mobiles                                        */
+/*                             ---------------------------                            */
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  /*  --------------------------------------------------------------------------------- */
+  /*                                    Navbar                                          */
+  /*                            ---------------------------                             */
+  .navbar-collapse {
+    background: var(--bgColor);
+    position: fixed;
+    top: 50px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+  }
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+  /* Slide navbar back in */
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                    Galaxy Fold                                    */
+/*                            ---------------------------                            */
+
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+}

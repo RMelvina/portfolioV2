@@ -1,0 +1,84 @@
+@import "../../../../../../styles.css";
+
+/* Contact Section */
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* Contact Section Ends */
+
+/* Main Title for Sections */
+.mainTitle {
+  position: relative;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.mainTitle::after {
+  content: "Get in touch";
+  color: var(--fontColor);
+  width: 120px;
+}
+/* Main Title for Sections Ends */
+
+/* Icons */
+.social-icons {
+  font-size: 2rem;
+  color: white;
+  background-color: var(--bgColor);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-icons:hover {
+  color: var(--fontColor);
+  background-color: white;
+}
+.icon-container {
+  /* width: fit-content; */
+  width: 100%;
+  align-items: center;
+}
+
+.icon-div {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Quries */
+
+/* iPad Pro/ iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Mobiles */
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  /* Icon */
+  .icon-col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  /* Icon Ends */
+}
+
+/* Galaxy Fold */
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+  /* Main Title */
+  .mainTitle::before {
+    width: 70%;
+  }
+  /* Main Title Ends */
+
+  /* Icon */
+  .icon-col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  /* Icon Ends */
+}
+/* Galaxy Fold Ends */

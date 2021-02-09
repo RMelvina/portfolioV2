@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Josefin+Sans:ital,wght@0,500;1,300&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --mainHeight: 100vh;
+  --fontColor: #880fdc;
+  --fontFamily: "Cabin", sans-serif;
+  --bgColor: #880fdc;
+  --mainBgColor: linear-gradient(rgb(0, 0, 0), rgba(108, 7, 171));
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+ 
+  /* box-sizing: border-box; */
+  scroll-behavior: smooth;
+  /* min-height: 100vh; */
+
+  
+ 
+}
+
+/* -------------------------------- */
+.mainTitle {
+  font-family: var(--fontFamily);
+  /* font-size: 3rem; */
+  font-weight: 800;
+  /* color: white; */
+  margin-top: 30px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.mainTitle::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 3px;
+  background-color: black;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  background: rgb(255, 255, 255);
+  bottom: -12px;
+  font-size: 20px;
+  color: var(--fontColor);
+  left: 50%;
+  transform: translate(-50%);
+}
+/* --------------------------------- */
+
+/* -----------KEYFRAME ANIMATION--------------- */
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animated-rubberBand {
+  animation: rubberBand 1s linear;
+}
+/* --------------------------------- */

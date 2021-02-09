@@ -1,0 +1,61 @@
+<section
+  class="container-fluid skills-section d-flex align-items-center"
+  id="skills"
+>
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row mb-5 d-flex justify-content-center align-items-center">
+      <!-- Column Title -->
+      <div class="col-12">
+        <h1 class="mainTitle text-center">Skills</h1>
+      </div>
+      <!-- Column Title Ends -->
+
+      <!-- Column One Contents -->
+      <div class="col-lg-6 pr-5">
+        <!-- Angular Material Progress Bar Content -->
+        <div class="bars mt-4 mb-4" *ngFor="let skillListOne of skillsListOne">
+          <!-- Skill Name and Percentage -->
+          <div class="d-flex justify-content-between info pb-2">
+            <span>{{ skillListOne.name }}</span>
+            <span>{{ skillListOne.percentage }}</span>
+          </div>
+          <!-- Skill Name and Percentage Ends-->
+
+          <!-- Progress Bar -->
+          <mat-progress-bar
+            mode="determinate"
+            value="{{ skillListOne.barVal }}"
+          ></mat-progress-bar>
+          <!-- Progress Bar Ends -->
+        </div>
+        <!-- Angular Material Progress Bar Content Ends -->
+      </div>
+      <!-- Column One Content Ends -->
+
+      <!-- Column Two Contents -->
+      <div class="col-lg-6">
+        <!-- Angular Material Progress Bar Content -->
+        <div class="bars mt-4 mb-4" *ngFor="let skillListTwo of skillsListTwo">
+          <!-- Skill Name and Percentage -->
+          <div class="d-flex justify-content-between info pb-2">
+            <span>{{ skillListTwo.name }}</span>
+            <span>{{ skillListTwo.percentage }}</span>
+          </div>
+          <!-- Skill Name and Percentage Ends-->
+          <!-- Progress Bar -->
+          <mat-progress-bar
+            mode="determinate"
+            value="{{ skillListTwo.barVal }}"
+          ></mat-progress-bar>
+          <!-- Progress Bar Ends -->
+        </div>
+        <!-- Angular Material Progress Bar Content Ends -->
+      </div>
+      <!-- Column Two Contents Ends -->
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>

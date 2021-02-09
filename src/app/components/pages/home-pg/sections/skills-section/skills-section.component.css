@@ -1,0 +1,80 @@
+@import "../../../../../../styles.css";
+/*  --------------------------------------------------------------------------------- */
+/*                                 Skills                                             */
+/*                         ----------------------------                               */
+
+.skills-section {
+  min-height: var(--mainHeight);
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                 Icons                                              */
+/*                         ----------------------------                               */
+
+.icon {
+  font-size: 5rem;
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                             Main title for each section                            */
+/*                            -----------------------------                           */
+
+.mainTitle {
+  padding-top: 2rem;
+  color: black;
+  position: relative;
+  font-size: 3rem;
+}
+
+.mainTitle::after {
+  content: "What I know";
+  background-color: white;
+  width: 120px;
+}
+
+.mainTitle::before {
+  background-color: black;
+  width: 16%;
+}
+/*  --------------------------------------------------------------------------------- */
+/*                                    Dialog box                                      */
+/*                            -----------------------------                           */
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: var(--bgColor);
+}
+.bars .info span {
+  font-size: 1.3rem;
+  font-family: var(--fontFamily);
+  color: black;
+}
+
+/*  --------------------------------------------------------------------------------- */
+/*                                   Media Quries                                     */
+/*  --------------------------------------------------------------------------------- */
+/*                                   iPad Pro/ iPad                                   */
+/*                            ---------------------------                             */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+/*  --------------------------------------------------------------------------------- */
+/*                                     Mobiles                                        */
+/*                             ---------------------------                            */
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .mainTitle::before {
+    width: 50%;
+    background-color: black;
+  }
+}
+/*  --------------------------------------------------------------------------------- */
+/*                                    Galaxy Fold                                    */
+/*                            ---------------------------                            */
+
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+  .mainTitle::before {
+    width: 100%;
+    background-color: black;
+  }
+}
+/*  --------------------------------------------------------------------------------- */

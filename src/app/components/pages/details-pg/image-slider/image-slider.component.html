@@ -1,0 +1,28 @@
+
+
+<div id="pImgs" class="carousel slide" data-ride="carousel slide">
+<!-- data-interval="false" -->
+    <div class="carousel-inner text-center">
+
+        <div class={{img.item}} *ngFor="let img of imgs">
+            <img src={{img.imgUrl}} class={{img.imgC}} alt="">
+            <span class="desc">{{img.desc}}</span>
+        </div>
+
+        <!--Prev/Next Arrows-->
+        <div class="container carouselBtn-container">
+            <a class="carousel-control-prev" href="#pImgs" data-slide="prev">
+                <span class="carousel-control-prev-icon fa fa-angle-left"></span>
+
+            </a>
+            <a class="carousel-control-next" href="#pImgs" data-slide="next">
+                <span class="carousel-control-next-icon fa fa-angle-right"></span>
+            </a>
+        </div>
+        <!--Prev/Next Arrows End-->
+       
+        <div>
+
+        </div>
+    </div>
+</div>

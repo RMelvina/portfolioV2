@@ -1,0 +1,56 @@
+<div class="main-container" mat-dialog-content>
+  <!-- Close dialog box icon -->
+  <i class="fa fa-times iconClose" (click)="closeDialog()"></i>
+  <!---------------------->
+
+  <!-- Container for projects -->
+  <div class="container-projects container">
+    <!-- The main row of projects -->
+    <div class="row projects-row">
+      <!-- Column for mobile projects heading -->
+      <div class="col-12">
+        <h1 class="text-center">Mobile Projects</h1>
+      </div>
+      <!-- Column ends -->
+
+      <!-- Column for mobile projects -->
+      <div
+        class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mobile-col"
+        *ngFor="let mobileProject of mobileProjects"
+      >
+        <div class="card m-1">
+          <app-dialog-content
+            [project]="mobileProject"
+            (closeDialog)="closeDialog()"
+          >
+          </app-dialog-content>
+        </div>
+      </div>
+      <!-- Column ends -->
+
+      <!-- Column for web projects heading -->
+
+      <div class="col-12">
+        <h1 class="text-center">Web Projects</h1>
+      </div>
+      <!-- Column ends -->
+
+      <!-- Column for web projects -->
+      <div
+        class="col-xl-4 col-lg-4 col-md-6 col-sm-12 web-col"
+        *ngFor="let webProject of webProjects"
+      >
+        <div class="card m-1">
+          <app-dialog-content
+            [project]="webProject"
+            (closeDialog)="closeDialog()"
+          >
+          </app-dialog-content>
+        </div>
+      </div>
+      <!-- Column ends -->
+    </div>
+    <!-- Row ends -->
+  </div>
+  <!-- Main container ends -->
+</div>

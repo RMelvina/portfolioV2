@@ -1,0 +1,61 @@
+<section
+  class="main-container d-flex align-items-center justify-content-center"
+>
+
+  <!-- Main container -->
+  <div class="mainSub-container container-fluid d-flex flex-row">
+    <!-- Row -->
+    <div class="row">
+      <!-- Image col -->
+      <div class="col-lg-5">
+        <!-- Image slider container -->
+        <div class="slider-container">
+          <!--  -->
+          <div class="inner-slider-container">
+            <!--  -->
+            <app-image-slider [imgs]="projectDetails.imgsArray">
+            </app-image-slider>
+            <!--  -->
+          </div>
+          <!--  -->
+        </div>
+        <!-- Image slider container end -->
+      </div>
+      <!-- Image col end -->
+
+      <!-- Project infomation col -->
+      <div class="col-lg-7 p-5">
+        <app-details
+        [projectDetails] = "projectDetails">
+
+        </app-details>
+      </div>
+      <!-- Project infomation col end -->
+
+       <!-- Right and left navigate buttons -->
+       <div class="col-12 d-flex justify-content-between">
+        <!-- Prevs btn -->
+        <button class="btn iconPrevs mb-3" (click)="prevBtn()" #prev>
+          <i class="fa fa-angle-left icon"></i>
+        </button>
+        <!-- Prevs btn end -->
+        <!-- Next btn  -->
+        <button class="btn iconNext mb-3" (click)="nextBtn()" #next>
+          <i class="fa fa-angle-right icon"></i>
+        </button>
+        <!-- Next btn end -->
+      </div>
+      <!-- Right and left navigate buttons end -->
+     
+    </div>
+    <!-- Row end -->
+
+
+    
+  </div>
+  <!-- Main container end -->
+
+</section>
+
+<!-- (nextBtn) = "nextBtn()"
+      (prevBtn) = "prevBtn()" -->

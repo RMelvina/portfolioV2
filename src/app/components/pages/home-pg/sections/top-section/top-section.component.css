@@ -1,0 +1,95 @@
+@import '../../../../../../styles.css';
+
+.home-section-top {
+  /* height: 100vh; */
+  background: var(--mainBgColor)
+}
+
+.home-section-mainTitle,
+.home-section-subTitle,
+.home-section-mainTitleSub {
+  color: whitesmoke;
+  font-size: 9rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  font-family: var(--fontFamily);
+  cursor: pointer;
+}
+
+
+.animated {
+  display: inline-block;
+}
+
+.animated:hover {
+  color: var(--fontColor);
+  animation: rubberBand linear 1s;
+}
+
+
+.home-section-subTitle,
+.home-section-mainTitleSub {
+  font-size: 1.9rem;
+}
+.home-section-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-section-row {
+  /* min-height: var(--mainHeight); */
+  background-color: violet;
+}
+.profileImg {
+  width: 36rem;
+}
+.icon {
+  font-size: 3rem;
+  color: whitesmoke;
+  padding-right: 2rem;
+}
+.desc-container {
+  width: fit-content;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  /* min-height: var(--mainHeight); */
+  font-family: var(--fontFamily);
+}
+.font {
+  color: black;
+}
+
+
+/* iPad Pro/ iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Mobiles */
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+.home-section-mainTitle,
+.home-section-subTitle,
+.home-section-mainTitleSub{
+  padding: 0px;
+}
+  
+  .home-section-mainTitle{
+    font-size: 4rem;
+  }
+  .home-section-subTitle,
+  .home-section-mainTitleSub{
+    font-size: 1.3rem;
+  }
+  
+  
+}
+
+
+/* Galaxy Fold */
+@media only screen and (min-width: 200px) and (max-width: 280px) {
+  
+  .icon {
+    font-size: 1.6rem;
+  }
+  
+}

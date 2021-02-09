@@ -1,0 +1,43 @@
+<section
+  class="container-fluid what-section d-flex align-items-center"
+  id="services"
+>
+  <!-- Container -->
+  <div class="container service-container">
+    <!-- Row -->
+    <div class="row service-row justify-content-center">
+      <!-- Heading Column -->
+      <div class="col-12">
+        <h1 class="mainTitle service-title text-center">Services</h1>
+      </div>
+      <!-- Heading Column Ends -->
+
+      <!-- Contents Column -->
+      <div
+        class="col-xl-2 col-lg-5 col-md-5 col-sm-12 card text-center"
+        *ngFor="let array of arrays"
+      >
+        <!-- Card Content -->
+        <div class="info-container pt-3 pb-3">
+          <!-- Main Heading -->
+          <h1 class="heading">{{ array.title }}</h1>
+          <!-- Main Heading Ends -->
+
+          <!-- Image -->
+          <img src="{{ array.img }}" class="img-fluid img" alt="" />
+          <!-- Image End -->
+
+          <!-- Desc -->
+          <p class="desc mt-4">
+            {{ array.desc }}
+          </p>
+          <!-- Desc Ends -->
+        </div>
+        <!-- Card Content Ends -->
+      </div>
+      <!-- Content Column Ends -->
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>

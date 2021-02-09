@@ -1,0 +1,50 @@
+<nav
+  class="navbar fixed-top navbar-expand-lg"
+  [ngClass]="{ fixed: isScrolled }"
+>
+  <button
+    (click)="openNavbar()"
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    
+  >
+    <!-- <span class="navbar-toggler-icon navIcon icon isClicked "></span> -->
+    <span class="{{ icon }}" class="color"></span>
+  </button>
+
+  <a class="navbar-brand" href="#">Port<span>folio</span></a>
+
+ 
+  
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav sideNavbar ml-auto mt-2 mt-lg-0">
+      <li
+        (click)="toSection(navbarItem.url)"
+        class="nav-item"
+        *ngFor="let navbarItem of navbarI"
+        (mouseover)="navbarItem.hovered = true"
+        (mouseout)="navbarItem.hovered = false"
+      >
+        <a
+          href="/"
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+          onclick="return false;" 
+          class="nav-link navbar-link navbarLink"
+          [ngClass]="
+            isScrolled != true && navbarItem.hovered == true
+              ? 'hoverColor'
+              : 'colorWhite'
+          "
+        >
+          {{ navbarItem.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

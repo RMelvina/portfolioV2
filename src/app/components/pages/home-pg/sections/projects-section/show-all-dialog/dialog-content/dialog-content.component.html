@@ -1,0 +1,26 @@
+<!-- Image Container -->
+<div class="img-container">
+  <!-- Image Overlay -->
+  <div class="overlay">
+    <img src="{{ project.projectsImgUrl }}" class="img-fluid showImg" alt="" />
+  </div>
+  <!-- Image Overlay Ends -->
+
+  <!-- Content -->
+  <div class="details-container">
+    <!-- Project Title -->
+    <span class="projectTitle">{{ project.projectTitle }}</span>
+    <!-- Project Title Ends -->
+    <!-- More Detail Bnt -->
+    <button
+      [routerLink]="['/details', project.id]"
+      (click)="closeDialog.emit()"
+      class="btn moreDBtn mt-4"
+    >
+      More detail
+    </button>
+    <!-- More Detail Btn Ends -->
+  </div>
+  <!-- Content Ends -->
+</div>
+<!-- Image Container Ends -->
