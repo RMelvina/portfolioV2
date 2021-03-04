@@ -1,7 +1,9 @@
 export const aboutMeD = `I am a graduate in Software and Web Development and am looking for
-job opportunity in Software Development. I am a good team player.
+job opportunity in Front end web development. I am a good team player,
 problem solver and I like new challenges.
 I would love to expend my current skills and learn new skills.`;
+
+
 
 // -------------------------------------------------------------------------------
 //                          Quick Coaching App
